@@ -1,0 +1,197 @@
+/*CSS Style for index.html page*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Colours used in the website*/
+:root {
+    /*Basic colours used in the website*/
+    --main-color: #272825;
+    --main-color-light: #073765;    /*Used for hover*/
+    --main-color-dark: #00284d;     /*Used for inactive elements*/
+    --accent-color: #BA372E;
+    --accent-color-light: #0e62b6;  /*Used for hover*/
+    --accent-color-dark: #014993;   /*Used for inactive elements*/
+    --secondary-color: #333430;
+    --secondary-color-light: #686f7c;
+    --secondary-color-dark: #38444F;
+    --contrast-color: #FFFFFF;
+    /*Colours for text*/
+    --light-text: #F5F5F0;
+    --medium-text: #5A6772;
+    --dark-text: #1C2024;
+    /*Colours fot shadows and transparent elements*/
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --accent-shadow-color: rgba(0, 89, 179, 0.2);
+    --transparent: rgba(0, 0, 0, 0);
+    /*Colours fot status*/
+    --avaliable: #099f09;
+    --unavaliable: #9d0b0b;
+    --warning: #ffff4b;
+    --warning-text: #727224;
+    --danger: #9d0b0b;
+    --danger-text: #4f0606;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Source Code Pro', monospace;
+    color: var(--light-text);
+    background: var(--main-color);
+}
+
+.main-title {
+    font-family: 'Libre Bodoni', serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Silkscreen', cursive;
+    font-weight: bold;
+}
+
+.main-card {
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--main-color);
+    background: var(--accent-color);
+}
+
+.skill-card {
+    font-family: 'Silkscreen', cursive;
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--light-text);
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill-card .icon {
+    width: auto;
+    height: 80px;
+}
+.skill-card .label {
+    margin: auto;
+    margin-bottom: 0px;
+}
+
+.work-card {
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--light-text);
+    background: var(--secondary-color);
+}
+.work-card:hover {
+    box-shadow: 0 4px 8px 0 var(--shadow-color), 0 6px 10px 0 var(--shadow-color);
+}
+.work-card img {
+    margin-bottom: 20px;
+    width: 260px;
+    height: 160px;
+    border-radius: 20px;
+}
+.work-card .title {
+    margin: auto 0 0 0;
+}
+.work-card p {
+    margin: 0;
+}
+
+button {
+    padding: 10px;
+    border: 0;
+    border-radius: 20px !important;
+    color: var(--accent-color);
+    background: var(--main-color);
+}
+
+.section {
+    margin-top: 20px;
+    width: 640px;
+}
+
+.title {
+    color: var(--accent-color);
+    font-family: 'Libre Bodoni', serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Silkscreen', cursive;
+}
+
+#info-card {
+    margin-top: 40px;
+}
+#info-card p {
+    color: var(--light-text);
+}
+
+#page-content {
+    color: var(--light-text);
+    background: var(--main-color);
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info-card {
+    display: flex;
+    flex-direction: row;
+}
+
+#info-text {
+    margin: 0 auto 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#info-links {
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#info-links a {
+    text-decoration: none;
+}
+.button-icon {
+    margin-right: 5px;
+}
+#info-links img {
+    width: 32px;
+    height: 32px;
+    filter: invert(96%) sepia(15%) saturate(901%) hue-rotate(40deg) brightness(137%) contrast(92%);
+}
+#info-links button {
+    margin-right: 10px;
+    color: var(--light-text);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#info-pic {
+    margin-left: auto;
+    margin-right: 0;
+
+}
+#info-pic img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+}
+
+.wrap-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
