@@ -70,6 +70,9 @@ CSS Style for index.html page
 
 #info-card {
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #info-card p {
     color: var(--light-text);
@@ -84,13 +87,8 @@ CSS Style for index.html page
     align-items: center;
 }
 
-#info-card {
-    display: flex;
-    flex-direction: row;
-}
-
 #info-text {
-    margin: 0 auto 0 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,8 +100,9 @@ CSS Style for index.html page
     margin-bottom: 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
 }
 #info-links a {
     text-decoration: none;
@@ -117,7 +116,7 @@ CSS Style for index.html page
     filter: invert(96%) sepia(15%) saturate(901%) hue-rotate(40deg) brightness(137%) contrast(92%);
 }
 #info-links button {
-    margin-right: 10px;
+    margin-top: 10px;
     color: var(--light-text);
     display: flex;
     flex-direction: row;
@@ -125,9 +124,7 @@ CSS Style for index.html page
 }
 
 #info-pic {
-    margin-left: auto;
-    margin-right: 0;
-
+    margin: auto;
 }
 #info-pic img {
     width: 240px;
@@ -139,4 +136,40 @@ CSS Style for index.html page
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+
+/* Responsive media queries */
+@media (540px <= width < 720px) {
+    #info-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #info-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media (width >= 720px) {
+    #info-card {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #info-pic {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    #info-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #info-links button {
+        margin-top: 0;
+        margin-right: 10px;
+    }
+    
 }

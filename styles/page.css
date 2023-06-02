@@ -64,7 +64,20 @@ button {
 
 .section {
     margin-top: 20px;
-    width: 640px;
+    width: 360px;
+    width: 90%;
 }
 
 
+/* Responsive media queries */
+@media (540px <= width < 720px) {
+    .section {
+        width: 460px;
+        width: 80%;
+    }
+}
+@media (width >= 720px) {
+    .section {
+        width: 640px;
+    }
+}
