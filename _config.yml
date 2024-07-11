@@ -53,3 +53,13 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+navigation:
+    - text: Home
+      url: /
+    - text: Blog
+      url: /blog/
+    - text: Works
+      url: /works/
+    - text: About
+      url: /about/
