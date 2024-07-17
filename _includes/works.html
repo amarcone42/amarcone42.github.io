@@ -1,10 +1,10 @@
 <section>
   <div class="work-container">
-    <ul class= "post-list">
+    <ul class= "work-list">
       {% assign work_pages = site.pages | where_exp: "page", "page.path contains 'works/'" %}
       {% for work in work_pages %}
         <li>
-          <h3><a class="post-link" href="{{ work.url }}">{{ work.title }}</a></h3>
+          <h3><a class="work-link" href="{{ work.url }}">{{ work.title }}</a></h3>
           <p>{{ work.description }}</p>
         </li>
       {% endfor %}
