@@ -1,0 +1,100 @@
+@use "sass:math";
+
+.bento-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 80vh;
+}
+
+.bento-grid {
+  margin: auto;
+  //height: math.div(740,12) * 10px;
+  width: clamp(350px, 100%, calc(($card-gap * 3) + ($card-size + 60px + 2*$card-padding)* 4));
+  display: flex;
+  flex-wrap: wrap;
+  gap: $card-gap;
+
+
+  .bento-card {
+    padding: 14px;
+    //height: calc($card-size - $card-size / 10);
+    height: $card-size;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $background-color-accent;
+    border-radius: $border-radius-s;
+
+    h2 {
+      margin: 0;
+    }
+    h2,h3 {
+      margin-bottom: 4px;
+    }
+    .title {
+      margin-bottom: 0px;
+    }
+    p {
+      margin-bottom: 8px;
+      color: $grey-color;
+    }
+
+    img {
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+  }
+
+  .xl {
+    flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+
+    
+  }
+  .l {
+    flex-basis: calc($card-size * 2);
+    flex-grow: 2;
+  }
+
+  .m {
+    flex-basis: calc(($card-size + 60px)* 1);
+  }
+
+  
+
+  .main {
+    background-color: $brand-color;
+    flex-basis: calc(($card-size + 60px)*3);
+    flex-grow: 3;
+    img {
+      border-radius: 12px;
+    }
+    h2 {
+      font-family: "Silkscreen", sans-serif;
+    }
+    span {
+      font-family: monospace;
+    }
+    p {
+      color: $text-color;
+    }
+  }
+}
+
+
+@include media-query(min-width $on-laptop) {
+  .bento-grid {
+
+    .bento-card {
+
+      .xl {
+        //flex-basis: calc($card-size * 2);
+      }
+    }
+  }
+}
+
+

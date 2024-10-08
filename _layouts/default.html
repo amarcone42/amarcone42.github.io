@@ -8,8 +8,14 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
+      {% if page.layout != "home" %}
       <div class="wrapper">
-        {{ content }}
+      {% else %}
+      <div class="bento-container">
+      {% endif %}
+
+      {{ content }}
+
       </div>
     </main>
     {% if page.title != "About" and page.layout != "home" %}

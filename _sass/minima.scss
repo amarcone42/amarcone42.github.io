@@ -9,6 +9,7 @@ $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
+$border-radius-s:  12px !default;
 
 $text-color:       #F5F5F0 !default;
 $background-color: #111111 !default;
@@ -23,6 +24,9 @@ $table-text-align: left !default;
 
 // Width of the content area
 $content-width:    800px !default;
+$card-size:        7rem;
+$card-gap:         14px;
+$card-padding:     14px;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
@@ -51,5 +55,6 @@ $masthead-height: 56px;
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "bento"
 ;
