@@ -95,6 +95,28 @@
       color: $text-color;
     }
   }
+  .social-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 1.5em;
+
+    .social-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: inherit;
+  
+      .social-icon {
+        margin: 0;
+        height: 2.2em;
+        opacity: 0.8;
+        transition: transform 100ms;
+        color: $text-color;
+      }
+    }
+  }
 }
 
 
