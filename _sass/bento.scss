@@ -102,6 +102,10 @@
     align-content: center;
     gap: 1.5em;
 
+    &:hover {
+      background-color: $background-color-accent;
+    }
+
     .social-row {
       display: flex;
       justify-content: center;
