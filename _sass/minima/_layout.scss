@@ -58,24 +58,24 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $grey-color;
     line-height: $base-line-height;
 
-    padding: 10px 15px;
-    border-radius: 8px;
-
+    padding: 6px 8px;
+    border-radius: 100px;
+    text-align: center;
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 10px;
     }
     &:hover {
-      background-color: $background-color-accent;
+      color: $text-color;
       text-decoration: none;
     }
   }
 
   .active {
-    color: $brand-color;
+    color: $text-color;
   }
 
   @include media-query($on-palm) {
