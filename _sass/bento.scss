@@ -17,7 +17,7 @@
 
 
   .bento-card {
-    padding: 14px;
+    padding: $card-padding;
     //height: calc($card-size - $card-size / 10);
     height: $card-size;
     display: flex;
@@ -53,29 +53,12 @@
     }
   }
 
-  .xl {
-    flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
-    flex-grow: 2;
-    display: flex;
-    flex-direction: row;
-
-    
-  }
-  .l {
-    flex-basis: calc($card-size * 2);
-    flex-grow: 2;
-  }
-
-  .m {
-    flex-basis: calc(($card-size + 60px)* 1);
-  }
-
-  
-
   .main {
     background-color: $brand-color;
     flex-basis: calc(($card-size + 60px)*3);
     flex-grow: 3;
+    display: flex;
+    flex-direction: row; 
 
     &:hover {
       background-color: $brand-color-hover;
@@ -123,19 +106,65 @@
       }
     }
   }
-}
-
-
-@include media-query(min-width $on-laptop) {
-  .bento-grid {
-
-    .bento-card {
-
-      .xl {
-        //flex-basis: calc($card-size * 2);
-      }
-    }
+  .xl {
+    flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row; 
   }
+  .l {
+    flex-basis: calc($card-size * 1);
+    flex-grow: 1;
+  }
+  .m {
+    flex-basis: calc(($card-size + 60px)* 1);
+  }
+
+  @include media-query($on-laptop) {
+    width: clamp(350px, 100%, calc(($card-gap * 1) + ($card-size + 60px + 2*$card-padding)* 3));
+  
+      .main {
+        flex-basis: calc(($card-size + 60px)*3);
+        flex-grow: 3;
+      }
+      .xl {
+        flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
+        flex-grow: 2;        
+      }
+      .l {
+        flex-basis: calc($card-size * 1);
+        flex-grow: 1;
+      }
+      .m {
+        flex-basis: calc(($card-size + 60px)* 1);
+      } 
+  }
+  @include media-query($on-palm) {
+    width: clamp(350px, 100%, calc(($card-gap * 1) + ($card-size + 60px + 2*$card-padding)* 2));
+  
+      .main {
+        height: calc($card-size + ($card-size / 2));
+        flex-basis: calc(($card-size + 60px)*2);
+        flex-grow: 2;
+        align-items: center;
+        img {
+          width: $card-size;
+          height: $card-size;
+        }
+      }
+      .xl {
+        flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
+        flex-grow: 2;        
+      }
+      .l {
+        flex-basis: calc($card-size * 2);
+        flex-grow: 2;
+      }
+      .m {
+        flex-basis: calc(($card-size + 60px)* 1);
+      } 
+  }
+  
 }
 
 
