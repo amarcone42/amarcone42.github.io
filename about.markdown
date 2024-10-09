@@ -20,8 +20,12 @@ You can contact me at [my email](mailto:antonio.marcone@proton.me) or follow me 
 
 [GitHub](https://github.com/amarcone42)
 
+[Itch.io](https://amarcone42.itch.io)
+
 [Twitter](https://www.twitter.com/amarcone42)
 
 [Bsky](https://bsky.app/profile/amarcone.it)
+
+[Instagram](https://www.instagram.com/amarcone42)
 
 [Linkedin](https://www.linkedin.com/in/amarcone42/)
