@@ -54,7 +54,7 @@
       z-index: 2;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: $grey-color;
       }
     }
     
@@ -324,7 +324,11 @@
       .date {
         margin-bottom: 4px;
       }
+      h3 {
+        margin: 0;
+      }
       p {
+        margin: 0;
         color: $grey-color;
       }
       .title {

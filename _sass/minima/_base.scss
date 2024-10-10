@@ -29,13 +29,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  h1,h2,h3,h4,h5,h6 {
-    font-family: $header-font-family;
-    font-weight:$header-font-weight;
-  } 
-  h1 {
-    font-family: "Tiny5", sans-serif;
-  }
+  
   .title {
     font-family: $header-font-family;
     font-weight:$header-font-weight;
@@ -107,8 +101,17 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+h1 {
+  font-family: "Tiny5", sans-serif;
+}
+h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  font-weight:$header-font-weight;
+}
+.game {
+  h2, h3, h4, h5, h6 {
+    font-family: "Tiny5", sans-serif;
+  }
 }
 
 

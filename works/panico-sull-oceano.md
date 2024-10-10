@@ -3,6 +3,7 @@ layout: work
 title:  "Panico sull'oceano"
 date:   2018-07-12
 categories: book
+type: book
 description: "Descrizione opera"
 ---
 
