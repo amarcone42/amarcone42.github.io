@@ -3,21 +3,104 @@
 /**
  * Site header
  */
-.site-header {
+[role="banner"] {
   //border-top: 5px solid $grey-color-dark;
   //border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-
+  
   //padding-right: $spacing-unit;
   //padding-left: $spacing-unit;
   // Positioning context for the mobile navigation icon
   position: fixed;
   top: 0;
-  min-width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-trigger {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@include media-query($on-palm) {
+  label[for="nav-trigger"] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+
+    .menu-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+      z-index: 2;
+
+      > svg {
+        fill: $grey-color-dark;
+      }
+    }
+    
+  }
+
+  input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+
+  input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+  input:checked ~ .site-header {
+    flex-direction: column;
+    bottom: 0;
+    .site-nav {
+      display: flex;
+    }
+  }
+}
+
+
+.site-header {
+  padding: 6px 30px;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   background: linear-gradient(rgba(17, 17, 17, 0.8),rgba(17, 17, 17, 0.2));
   backdrop-filter: blur(16px);
+
+  @include media-query($on-palm) {
+    flex-direction: row;
+    align-items: center;
+  
+    background: linear-gradient(rgba(17, 17, 17, 0.8),rgba(17, 17, 17, 0.2));
+    backdrop-filter: blur(16px);
+  
+    .site-nav {
+      display: none;
+    }
+  }
 }
+
 
 .wrap {
   margin-left: $spacing-unit;
@@ -28,6 +111,17 @@
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img {
+    margin-right: 8px;
+  }
+  p {
+    margin: auto 0;
+    line-height: 22px;
+  }
 }
 
 .site-title {
@@ -36,26 +130,26 @@
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   &,
   &:visited {
     color: $brand-color;
     text-decoration: none !important;
   }
+  @include media-query($on-palm) {
+    margin-right: auto;
+  }
 }
 
 .site-nav {
-  float: right;
+  margin-left: auto;
+  margin-right: 0;
   line-height: $base-line-height * $base-font-size * 2.25;
-
-  .nav-trigger {
-      display: none;
-  }
-
-  .menu-icon {
-    display: none;
-  }
 
   .page-link {
     color: $grey-color;
@@ -79,54 +173,37 @@
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: math.div($spacing-unit,2);
-    background-color: $background-color-accent;
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;  
     border-radius: 5px;
-    text-align: right;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-    label[for="nav-trigger"] {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 36px;
-      z-index: 2;
-      cursor: pointer;
-    }
-
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg {
-        fill: $grey-color-dark;
-      }
-    }
-
-    input ~ .trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
+    .trigger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
 
     .page-link {
       display: block;
-      padding: 5px 10px;
+      padding: 28px 10px;
+      width: 100%;
+      
+      font-size: xx-large;
+      font-family: $header-font-family;
 
       &:not(:last-child) {
-        margin-right: 0;
+        margin: 0;
       }
-      margin-left: 20px;
+      :last-child {
+        margin: 0;
+      }
     }
   }
 }
