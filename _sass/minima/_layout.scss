@@ -12,9 +12,14 @@
   // Positioning context for the mobile navigation icon
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
+  @include media-query($on-palm) {
+    
+    input:checked ~ & {
+      bottom: 0;
+    }
+  }
 }
 
 .nav-trigger {
