@@ -1,0 +1,28 @@
+<section>
+  <div class="post-container">
+    {% if site.posts.size == 0 %}
+    <div class="empty">
+      <h2>Work in progress</h2>
+      <p><strong>No posts...yet</strong></p>
+      <p>Come back here in the future to read blog posts.</p>
+    </div>
+    {% else %}
+    <ul class="main-list">
+      {%- for post in site.posts -%}
+      <li>
+        <a class="card" href="{{ post.url | relative_url }}">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <p class="date"><span class="post-meta">{{ post.date | date: date_format }}</span></p>
+          <h3 class="title">
+            {{ post.title | escape }}
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {% endif %}
+  </div>
+</section>

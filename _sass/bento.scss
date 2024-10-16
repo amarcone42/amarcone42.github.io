@@ -1,0 +1,172 @@
+@use "sass:math";
+
+.bento-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 80vh;
+}
+
+.bento-grid {
+  margin: auto;
+  //height: math.div(740,12) * 10px;
+  width: clamp(350px, 100%, calc(($card-gap * 3) + ($card-size + 60px + 2*$card-padding)* 4));
+  display: flex;
+  flex-wrap: wrap;
+  gap: $card-gap;
+
+
+  .bento-card {
+    padding: $card-padding;
+    //height: calc($card-size - $card-size / 10);
+    height: $card-size;
+    display: flex;
+    flex-direction: column;
+
+    color: $text-color;
+    background-color: $card-color;
+    border-radius: $outer-radius;
+
+    text-decoration: none;
+    &:hover {
+      background-color: $card-color-hover;
+    }
+
+    h1,h2 {
+      margin: 0;
+    }
+    h2,h3 {
+      margin-bottom: 4px;
+    }
+    .title {
+      margin-bottom: 0px;
+    }
+    p {
+      margin-bottom: 8px;
+      color: $grey-color;
+    }
+
+    img {
+      margin-bottom: 0;
+      margin-right: 12px;
+      border-radius: $inner-radius;
+    }
+  }
+
+  .main {
+    background-color: $brand-color;
+    flex-basis: calc(($card-size + 60px)*3);
+    flex-grow: 3;
+    display: flex;
+    flex-direction: row; 
+
+    &:hover {
+      background-color: $brand-color-hover;
+    }
+
+    img {
+      border-radius: 100%;
+    }
+    h1 {
+      font-family: $brand-font-family;
+      font-weight: bold;
+      color: $background-color;
+    }
+    span {
+      font-family: $titles-font-family;
+      font-weight: 400;
+      font-size: 22px;
+    }
+    p {
+
+      color: $text-color;
+    }
+  }
+  .social-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 1.5em;
+
+    &:hover {
+      background-color: $card-color;
+    }
+
+    .social-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: inherit;
+  
+      .social-icon {
+        margin: 0;
+        height: 2.2em;
+        border-radius: 0;
+        transition: transform 100ms;
+        color: $text-color;
+      }
+    }
+  }
+  .xl {
+    flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row; 
+  }
+  .l {
+    flex-basis: calc($card-size * 1);
+    flex-grow: 1;
+  }
+  .m {
+    flex-basis: calc(($card-size + 60px)* 1);
+  }
+
+  @include media-query($on-laptop) {
+    width: clamp(350px, 100%, calc(($card-gap * 1) + ($card-size + 60px + 2*$card-padding)* 3));
+  
+      .main {
+        flex-basis: calc(($card-size + 60px)*3);
+        flex-grow: 3;
+      }
+      .xl {
+        flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
+        flex-grow: 2;        
+      }
+      .l {
+        flex-basis: calc($card-size * 1);
+        flex-grow: 1;
+      }
+      .m {
+        flex-basis: calc(($card-size + 60px)* 1);
+      } 
+  }
+  @include media-query($on-palm) {
+    width: clamp(350px, 100%, calc(($card-gap * 1) + ($card-size + 60px + 2*$card-padding)* 2));
+  
+      .main {
+        height: calc($card-size + ($card-size / 2));
+        flex-basis: calc(($card-size + 60px)*2);
+        flex-grow: 2;
+        align-items: center;
+        img {
+          width: $card-size;
+          height: $card-size;
+        }
+      }
+      .xl {
+        flex-basis: calc(($card-size + 60px) * 2 + $card-gap);
+        flex-grow: 2;        
+      }
+      .l {
+        flex-basis: calc($card-size * 2);
+        flex-grow: 2;
+      }
+      .m {
+        flex-basis: calc(($card-size + 60px)* 1);
+      } 
+  }
+  
+}
+
+
