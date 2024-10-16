@@ -11,6 +11,8 @@ description: "Collection of exam projects"
 
 Social network for activism groups developed as a _Human-machine Interaction_ exam project.
 
+![Agorà platform image](../assets/images/agorà-image.png)
+
 ### Software documentation and code
 
 All the code of the software prototype is publicly available on the [Agorà GitHub page](https://github.com/amarcone42/agora). No software documentation has been made, only design documentation, available in the same repository in the [documentation](https://github.com/amarcone42/agora/tree/master/documentation) section.
@@ -31,6 +33,8 @@ My role in the group was both _group manager_ and _design manager_. This allowed
 ## Chemo
 
 Scheduling and appointment management platform for a chemotherapy department developed as a _Software Engineering_ exam project.
+
+![Chemo platform image](../assets/images/chemo-image.png)
 
 ### Software documentation and code
 
