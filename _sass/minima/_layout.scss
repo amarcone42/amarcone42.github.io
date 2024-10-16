@@ -94,6 +94,7 @@
   backdrop-filter: blur(16px);
 
   @include media-query($on-palm) {
+    padding: 8px 20px;
     flex-direction: row;
     align-items: center;
   
@@ -435,6 +436,10 @@
       @include relative-font-size(1.125);
     }
   }
+
+  img {
+    border-radius: $small-radius;
+  }
 }
 
 /**
@@ -479,6 +484,10 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+
+  img {
+    border-radius: $small-radius;
   }
 }
 
