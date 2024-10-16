@@ -26,7 +26,7 @@
         margin-bottom: $card-gap;
 
         border-radius: $outer-radius;
-        background-color: $background-color-accent;
+        background-color: $card-color;
 
         p {
             margin: 0;
@@ -44,7 +44,7 @@
             
                 border-radius: $small-radius;
                 
-                background-color: $background-color-inner-card;
+                background-color: $inner-card-color;
                 
                 h3 {
                   margin: 0;
@@ -140,7 +140,7 @@
                 }
 
                 &:hover {
-                    background-color: $background-color-inner-hover;
+                    background-color: $inner-card-color-hover;
                 }
             }
         }

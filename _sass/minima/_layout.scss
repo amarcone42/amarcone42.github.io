@@ -318,9 +318,9 @@
   
       border-radius: inherit;
   
-      background-color: $background-color-accent;
+      background-color: $card-color;
       &:hover {
-        background-color: $background-color-hover;
+        background-color: $card-color-hover;
       }
       .date {
         margin-bottom: 4px;
