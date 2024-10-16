@@ -16,6 +16,8 @@ $text-color:       #F5F5F0 !default;
 $background-color: #111111 !default;
 $background-color-accent: lighten($background-color, 5%) !default;
 $background-color-hover: lighten($background-color, 8%) !default;
+$background-color-inner-card: lighten($background-color, 8%) !default;
+$background-color-inner-hover: lighten($background-color, 10%) !default;
 $brand-color:      #b31b1b !default;
 $brand-color-hover: lighten($brand-color, 5%) !default;
 
@@ -28,12 +30,12 @@ $table-text-align: left !default;
 // Width of the content area
 $content-width:    800px !default;
 $card-size:        7rem;
-$card-gap:         12px;
+$card-gap:         10px;
 $card-padding:     16px;
 
-$small-radius:     6px;
-$inner-radius:     16px;
 $outer-radius:     32px;
+$inner-radius:     calc($outer-radius - $card-padding);
+$small-radius:     calc($inner-radius - $card-gap);
 
 $on-palm:          700px !default;
 $on-laptop:        900px !default;
@@ -63,5 +65,6 @@ $masthead-height: 56px;
   "minima/base",
   "minima/layout",
   "minima/syntax-highlighting",
-  "bento"
+  "bento",
+  "about"
 ;
