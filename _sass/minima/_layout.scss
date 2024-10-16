@@ -113,7 +113,7 @@
 }
 
 .pixel-title {
-  font-family: "Silkscreen", sans-serif;
+  font-family: $brand-font-family;
   font-weight: 400;
   font-style: normal;
   display: flex;
@@ -126,6 +126,7 @@
   p {
     margin: auto 0;
     line-height: 22px;
+    color: $brand-color;
   }
 }
 

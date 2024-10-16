@@ -67,13 +67,13 @@
     img {
       border-radius: 100%;
     }
-    h1,h2 {
-      font-family: "Silkscreen", sans-serif;
+    h1 {
+      font-family: $brand-font-family;
       font-weight: bold;
       color: $background-color;
     }
     span {
-      font-family: "Tiny5", sans-serif;
+      font-family: $titles-font-family;
       font-weight: 400;
       font-size: 22px;
     }
