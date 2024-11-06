@@ -90,7 +90,7 @@
   flex-direction: row;
   align-items: center;
 
-  background: linear-gradient(rgba(17, 17, 17, 0.8),rgba(17, 17, 17, 0.2));
+  background: linear-gradient(rgba(17, 17, 17, 0.8),rgba(10, 10, 10, 0.2));
   backdrop-filter: blur(16px);
 
   @include media-query($on-palm) {

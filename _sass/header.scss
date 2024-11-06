@@ -21,27 +21,27 @@
     stroke-linecap:round;
 }
 
-.ham8 .top {
+.ham .top {
     stroke-dasharray: 40 160;
 }
-.ham8 .middle {
+.ham .middle {
     stroke-dasharray: 40 142;
     transform-origin: 50%;
     transition: transform 400ms;
 }
-.ham8 .bottom {
+.ham .bottom {
     stroke-dasharray: 40 85;
     transform-origin: 50%;
     transition: transform 400ms, stroke-dashoffset 400ms;
 }
-.ham8.active .top {
+.ham.active .top {
     stroke-dashoffset: -64px;
 }
-.ham8.active .middle {
+.ham.active .middle {
     //stroke-dashoffset: -20px;
     transform: rotate(90deg);
 }
-.ham8.active .bottom {
+.ham.active .bottom {
     stroke-dashoffset: -64px;
 }
   
