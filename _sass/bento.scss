@@ -9,6 +9,7 @@
 
 .bento-grid {
   margin: auto;
+  padding-bottom: $card-gap;
   //height: math.div(740,12) * 10px;
   width: clamp(350px, 100%, calc(($card-gap * 3) + ($card-size + 60px + 2*$card-padding)* 4));
   display: flex;
@@ -148,13 +149,17 @@
         height: calc($card-size + ($card-size / 2));
       }
       .main {
-        height: calc($card-size + ($card-size / 2));
+        height: calc(($card-size-mobile) * 4 + $card-gap);
         flex-basis: calc(($card-size-mobile + 20px)*2);
         flex-grow: 2;
+        flex-direction: column;
         align-items: center;
+        h1, p {
+          text-align: center;
+        }
         img {
-          width: $card-size-mobile;
-          height: $card-size-mobile;
+          width: $card-size-mobile * 2;
+          //height: $card-size-mobile;
         }
       }
       .xl {
@@ -162,17 +167,22 @@
         flex-grow: 2;       
         flex-direction: column; 
         
-        height: calc($card-size * 2.5);
+        height: calc($card-size * 2.4);
         img {
           margin-right: auto;
           margin-left: auto;
           margin-bottom: 12px;
           max-width: calc($card-size * 1.5);
         }
+        div {
+          margin-bottom: 0;
+          margin-top: auto;
+        }
       }
       .l {
         flex-basis: calc($card-size-mobile * 2);
         flex-grow: 2;
+        height: calc($card-size);
       }
       .m {
         flex-basis: calc(($card-size-mobile + 48px)* 1);
