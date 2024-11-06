@@ -290,7 +290,7 @@
  */
 .page-content {
   margin-top: $spacing-unit * 1.865;
-  padding: $spacing-unit 0;
+  padding: $spacing-unit 0 $card-gap 0;
   flex: 1;
 }
 
@@ -314,7 +314,7 @@
     .card {
       display: flex;
       flex-direction: column;
-      margin-bottom: $card-gap;
+      margin-bottom: calc($card-gap / 2);
       padding: $card-padding;
   
       border-radius: inherit;
