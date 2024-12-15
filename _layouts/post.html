@@ -24,4 +24,13 @@ layout: default
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
+  {% if page.title != "Blog"  %}
+  <a id="top-link" class="top-link" href="#top" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+      <path d="M12 6H0l6-6z"></path>
+    </svg>
+  </a>
+  <script src="{{ base.url | prepend: site.url }}/assets/js/scroll.js"></script>
+  {% endif %}
 </article>
